@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  nginx:
+    build: .
+    ports:
+      - "80:80"
+    restart: always
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
