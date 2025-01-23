@@ -5,10 +5,5 @@ services:
     build: .
     ports:
       - "80:80"
+    network_mode: "host"  # Changed this to host networking
     restart: always
-    networks:
-      - app_network
-
-networks:
-  app_network:
-    driver: bridge
